@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/projects/ouspms/static/css/main.3b71cc2a.css",
+    "main.js": "/projects/ouspms/static/js/main.5af5bdd8.js",
+    "index.html": "/projects/ouspms/index.html",
+    "main.3b71cc2a.css.map": "/projects/ouspms/static/css/main.3b71cc2a.css.map",
+    "main.5af5bdd8.js.map": "/projects/ouspms/static/js/main.5af5bdd8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3b71cc2a.css",
+    "static/js/main.5af5bdd8.js"
+  ]
+}

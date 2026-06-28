@@ -1,101 +1,70 @@
-OUSPMS: Open University Smart Printer Monitoring System
-An AI-powered web application to track, classify, and manage shared printer usage at the Open University of Sri Lanka (OUSL).
+# Getting Started with Create React App
 
-📖 Overview
-Shared printers and photocopiers are essential for academic and administrative work, but they are frequently misused for personal documents (e.g., CVs, private letters) and redundant copies. These unchecked behaviors lead to significant resource wastage, inflated paper and toner costs, and unnecessary machine maintenance.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-The OUSPMS addresses this challenge by leveraging Artificial Intelligence to analyze print jobs in real-time. The system classifies documents, provides emotional guidance and feedback to users, enforces printing limits, and fosters a culture of responsible resource usage—aligning with the university's digital transformation and sustainability goals.
+## Available Scripts
 
-✨ Key Features
-AI-Powered Document Classification: Uses Hugging Face API and Transformers to instantly classify print jobs as either Office or Personal.
+In the project directory, you can run:
 
-Real-Time Emotional Guidance: Delivers instant in-app notifications and feedback to users if a personal document is detected, discouraging misuse at the point of action.
+### `npm start`
 
-Intelligent Print Validation: Enforces strict printing rules, including a maximum copy limit (≤10 copies) and daily reprint restrictions (≤3 times/day).
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-Role-Based Dashboards:
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-User Dashboard: View print history, track usage patterns, and receive real-time notifications.
+### `npm test`
 
-Admin Dashboard: Manage users (add/remove by EPF), monitor system usage, and receive alerts on policy violations.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Dean Dashboard: Receive dedicated email alerts whenever private document printing is attempted.
+### `npm run build`
 
-Comprehensive Audit Logging: Securely logs all print attempts, document classifications, and terminated jobs to Firebase Firestore for historical reporting and accountability.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-🛠️ Technology Stack
-Frontend: React (with React Router & Bootstrap)
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-Backend: Python FastAPI (REST API architecture)
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-AI / NLP: Hugging Face API & Transformers (Document Classification)
+### `npm run eject`
 
-Database: Firebase Firestore (User profiles, print logs, AI results)
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-Authentication: Firebase Authentication (EPF/Password login)
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Notifications: Firebase Cloud Functions (Real-time alerts & Dean email triggers)
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-Hosting: Firebase Hosting / Vercel (Frontend) & Google Cloud Run / Railway (Backend)
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-🏗️ System Architecture
-The system operates on a decoupled client-server model:
+## Learn More
 
-Client Layer: A web application interface where users log in and attempt to print.
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-Backend API: FastAPI endpoints intercept the print request.
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-AI Engine: The document is sent to the Hugging Face API for classification.
+### Code Splitting
 
-Database & Logging: The result and metadata are saved to Firebase Firestore.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-Notification Layer: If a violation occurs, Firebase Cloud Functions trigger real-time prompts and email alerts.
+### Analyzing the Bundle Size
 
-(Suggested: Include your Use Case diagram from Page 5 of "7 SEP Proje P.docx" in the repository images folder and link it here)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-[Insert Use Case Diagram here]
+### Making a Progressive Web App
 
-🚀 Installation & Setup
-Prerequisites
-Node.js (v18+)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-Python (v3.9+)
+### Advanced Configuration
 
-Firebase Project (with Authentication & Firestore enabled)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-Hugging Face API Access Token
+### Deployment
 
-Steps
-Clone the repository:
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-bash
-git clone https://github.com/yourusername/OUSPMS.git
-cd OUSPMS
-Backend Setup (Python FastAPI):
+### `npm run build` fails to minify
 
-bash
-cd backend
-pip install -r requirements.txt
-# Create .env file with your Firebase credentials and HuggingFace API key
-uvicorn main:app --reload
-Frontend Setup (React):
-
-bash
-cd frontend
-npm install
-# Configure your Firebase Config in a .env file or config.js
-npm start
-🔮 Future Scope
-Integration with actual printer spoolers to automate job cancellation.
-
-Advanced predictive analytics to forecast peak printing times and seasonal resource consumption.
-
-Expansion of the AI model to categorize specific document types (e.g., Lecture notes vs. Research papers).
-
-👤 Author
-J.D. Rathnayake
-BSc Computer Science (Major), Open University of Sri Lanka
-https://img.shields.io/badge/Email-janithrathnayake650@gmail.com-blue
-
-📄 License
-This project is licensed under the MIT License.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
